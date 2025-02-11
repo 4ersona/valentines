@@ -9,17 +9,70 @@
     <meta property="og:title" content='Artist "Cheromani" performing in Montreal on Valentine’s Day'>
     <meta property="og:description" content="Tickets available now! Don't miss this once-in-a-lifetime event.">
     <meta property="og:image" content="https://i.imgur.com/n04RG73.jpeg">
-    <meta property="og:url" content="https://yourwebsite.com">  
+    <meta property="og:url" content="https://4ersona.github.io/valentines/">
+
+    <style>
+        /* Style for page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+        .message {
+            font-size: 2rem;
+            margin-top: 20%;
+            display: none;
+        }
+
+        .event-details {
+            display: block;
+        }
+    </style>
 
     <script>
-        // Redirect after clicking the link
+        // Redirect effect
         window.onload = function() {
-            setTimeout(() => {
-                document.body.innerHTML = '<h1 style="text-align:center; margin-top: 20%; font-size: 2rem;">jk!!! can i be your Valentine this year? :3 </h1>';
-            }, 1500); // Short delay before changing content
+            // Show concert details first
+            document.querySelector('.event-details').style.display = 'block';
+
+            // Switch to the Valentine message after a short delay
+            setTimeout(function() {
+                document.querySelector('.event-details').style.display = 'none';
+                document.querySelector('.message').style.display = 'block';
+            }, 2500); // Show after 2.5 seconds
         };
     </script>
 </head>
+
 <body>
+
+    <!-- Event details -->
+    <div class="event-details">
+        <h1>Artist "Cheromani" performing in Montreal on Valentine's Day</h1>
+        <p>Tickets available now! Don't miss this once-in-a-lifetime event!</p>
+        <div class="image-container">
+            <img src="https://i.imgur.com/n04RG73.jpeg" alt="Cheromani Concert">
+        </div>
+    </div>
+
+    <!-- Valentine's message (hidden initially) -->
+    <div class="message">
+        <h1>Just kidding!!</h1>
+        <p>Will you be my Valentine this year? ❤️</p>
+    </div>
+
 </body>
 </html>
